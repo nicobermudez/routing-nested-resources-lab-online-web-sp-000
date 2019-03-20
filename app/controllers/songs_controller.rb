@@ -7,7 +7,9 @@ class SongsController < ApplicationController
       else
         @songs = @artist.songs
       end
-    @songs = Song.all
+    else
+      @songs = Song.all
+    end
   end
 
   def show
